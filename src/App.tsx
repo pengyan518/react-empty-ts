@@ -4,7 +4,6 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import Intro from './features/intro/Intro'
 import {useAppSelector} from './app/hooks'
 import {RootState} from './app/store'
-import ModalVideo from './components/ModalVideo'
 
 // const twentyFourHoursInMs = 1000 * 60 * 60 * 24
 const queryClient = new QueryClient({
@@ -19,12 +18,10 @@ const queryClient = new QueryClient({
   }})
 
 function App() {
-  const {modalIsOpened} = useAppSelector((state: RootState) => state.intro)
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <Intro />
-        {modalIsOpened && <ModalVideo />}
       </div>
       {/* <ReactQueryDevtools initialIsOpen /> */}
     </QueryClientProvider>
