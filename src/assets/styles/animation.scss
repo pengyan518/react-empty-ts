@@ -1,0 +1,58 @@
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate(180px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(180px, 0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.item__fadeOut {
+  //animation-delay: 0.5s;
+  animation-timing-function: cubic-bezier(0.29, 0.78, 0.4, 1.01);
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: fadeOutRight;
+}
+.item__fadeInDown {
+  //animation-delay: 0.5s;
+  animation-timing-function: cubic-bezier(0, 0.99, 0.4, 1.01);
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+}
+.aboutUsTitle {
+  //transform: translate(180px, 0);
+  animation-timing-function: cubic-bezier(0.29, 0.78, 0.4, 1.01);
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: fadeOutRight;
+  &.item__fadeIn {
+    animation-timing-function: cubic-bezier(0.29, 0.78, 0.4, 1.01);
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeInRight;
+  }
+}

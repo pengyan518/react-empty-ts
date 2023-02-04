@@ -1,0 +1,49 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "react-app"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", {"argsIgnorePattern": "^_"}],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "prettier/prettier": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "document": false
+  },
+  "ignorePatterns": ["coverage/", "node_modules/", "src/serviceWorker.ts"]
+}

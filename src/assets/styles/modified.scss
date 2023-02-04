@@ -1,0 +1,126 @@
+:root {
+  --font-georgia: Georgia, 'Times New Roman', Times, serif;
+  --font-open-sans-condensed: "open-sans-condensed",sans-serif;
+}
+html,
+body {
+  font-size: 100%;
+}
+
+/* 767 px */
+@media only screen and (max-width: 47.9375em) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* 1024 px */
+@media only screen and (max-width: 64em) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* 1366 px */
+@media only screen and (min-width: 85.375em) {
+  html {
+    font-size: 100%;
+    //font-size: 105%;
+  }
+}
+
+/* 1600 px */
+@media only screen and (min-width: 100em) {
+  html {
+    font-size: 100%;
+    //font-size: 115%;
+  }
+}
+
+/* 1920 px */
+@media only screen and (min-width: 120em) {
+  html {
+    font-size: 100%;
+    //font-size: 120%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  line-height: inherit;
+}
+.MuiBox-root {
+  width: 70vw;
+  max-width: 1000px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.MuiBox-root:focus-visible {
+  outline: none;
+}
+
+.Garamond__font {
+  font-family: 'EB Garamond', serif;
+}
+.OpenSans__font {
+  font-family: 'Open Sans', sans-serif;
+}
+.open-sans-c {
+  font-family: var(--font-open-sans-condensed), sans-serif;
+}
+.regular__p p {
+  @apply mb-10;
+}
+.small__p p {
+  @apply mb-6;
+}
+.text-shadow-white {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.list-disc {
+  list-style-type: disc !important;
+}
+.list-disc li {
+  list-style: inside !important;
+}
+.display-none {
+  display: none;
+}
+.header-outer-wrapper {
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 1.25rem;
+  }
+}
+/* 767 px */
+@media only screen and (max-width: 47.9375em) {
+  .MuiBox-root {
+    width: 100%;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+}
+.timelineAnchor {
+  @apply italic;
+  color: #b18952;
+  &:hover,
+  &:focus {
+    color: darken(#b18952, 10%);
+  }
+}
+[lang='zh-tw'],
+[lang='zh-cn'] {
+  .italic {
+    font-style: normal;
+  }
+}

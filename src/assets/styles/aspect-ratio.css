@@ -1,0 +1,8 @@
+.AspectRatio {
+  display: block;
+  position: relative;
+}
+.AspectRatio::before {
+  content: '';
+  display: block;
+}
